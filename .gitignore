@@ -1,0 +1,40 @@
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+ENV/
+env/
+.env
+
+# Application uploads and databases
+backend/uploads/*
+!backend/uploads/.gitkeep
+backend/vectordb/*
+!backend/vectordb/.gitkeep
+
+# Telemetry and logging
+backend/rag_observability.log
+*.log
+
+# Model fine-tuning checkpoints and adapters
+backend/rag/finetune_output/
+C:\Users\hp\.cache/huggingface/
+
+# Local HuggingFace model cache (downloaded models ~175MB, do not commit)
+backend/.model_cache/
+
+# Node/Vite frontend build files
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# OS files
+.DS_Store
+Thumbs.db

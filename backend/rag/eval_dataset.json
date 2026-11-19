@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "question": "What are the standard parameters for Okapi BM25 keyword search?",
+    "expected_keywords": ["k1", "b", "1.5", "0.75", "parameters"],
+    "ground_truth": "The standard parameters for Okapi BM25 are k1 and b. Standard default values are k1 = 1.5 (which controls term frequency saturation) and b = 0.75 (which controls document length normalization)."
+  },
+  {
+    "id": 2,
+    "question": "How does Reciprocal Rank Fusion (RRF) combine search rankings?",
+    "expected_keywords": ["RRF", "rank", "combines", "reciprocal", "60", "constant"],
+    "ground_truth": "Reciprocal Rank Fusion (RRF) combines rankings from multiple search systems (like vector and keyword search) by summing the reciprocal of their ranks plus a constant k (typically 60). The formula is RRF(d) = sum(1 / (k + rank))."
+  },
+  {
+    "id": 3,
+    "question": "What is the primary role of a Cross-Encoder in a RAG pipeline?",
+    "expected_keywords": ["Cross-Encoder", "re-ranker", "rerank", "query", "document", "relevance"],
+    "ground_truth": "The primary role of a Cross-Encoder in a RAG pipeline is to act as a semantic re-ranker. It takes a query and a retrieved candidate document together to compute a deep semantic relevance score, re-sorting candidates to promote the most relevant chunks."
+  },
+  {
+    "id": 4,
+    "question": "Explain the difference between PDF and PPTX chunking strategies.",
+    "expected_keywords": ["chunking", "slide", "PDF", "page", "sliding window", "discrete"],
+    "ground_truth": "For PDFs, text is typically split page-by-page or using a sliding window (e.g. 800 characters with 150 characters overlap) to preserve continuity. For PPTX, the chunking strategy is slide-based, treating each slide as a discrete thematic chunk including titles, bullet points, tables, and notes."
+  },
+  {
+    "id": 5,
+    "question": "Why is citation verification crucial for educational RAG systems?",
+    "expected_keywords": ["citation", "grounding", "grounded", "verify", "hallucination", "accuracy"],
+    "ground_truth": "Citation verification is crucial to enforce strict grounding and ensure the AI answers are derived strictly from uploaded study materials. It prevents hallucinations by parsing inline references, verifying their source mappings, and cleaning out invalid citations."
+  }
+]
